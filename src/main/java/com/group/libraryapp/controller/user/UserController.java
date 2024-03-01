@@ -32,6 +32,5 @@ public class UserController {
     @PutMapping
     public void updateUser(@RequestBody UserUpdateRequest userUpdateRequest) {
         String sql = "UPDATE user SET name = ? WHERE id = ?";
-        jdbcTemplate.update(sql, request.getName(), request.getId());
     }
 }
